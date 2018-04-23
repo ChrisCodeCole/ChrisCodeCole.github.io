@@ -1,0 +1,616 @@
+/**COLORS**/
+/**FONTS**/
+body {
+  margin: 0 auto; }
+
+h2 {
+  font-family: "Cormorant Infant", serif;
+  letter-spacing: 0.2em;
+  font-size: 3em;
+  color: #808D8E; }
+
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 1.2em; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/**NAVBAR**/
+.topnav {
+  position: fixed;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1; }
+  .topnav a {
+    float: left;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: #808D8E; }
+    .topnav a:hover {
+      background-color: rgba(20, 20, 20, 0.3);
+      color: #0047ed; }
+  .topnav .topnav-right {
+    float: right; }
+
+/*
+BACKGROUND IMAGE(w3school style)
+.bgimg {
+    background-image: url('/w3images/forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+*/
+/*************
+
+GRID - INTRO IMAGE
+
+**************/
+#my-intro {
+  background: url(Images/laptop1.jpg) no-repeat scroll center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  display: block;
+  height: 50em;
+  z-index: -1; }
+
+/**************
+
+GRID - MY BACKGROUND
+
+******************/
+#my-background {
+  overflow: hidden;
+  background-color: #d6d9e0;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-areas: "txt txt txt txt txt" "bg-left c1 c1 c1 c1" "bg-left c2 c2 c2 c2"; }
+  #my-background h2 {
+    grid-area: txt;
+    margin: 3em auto; }
+  #my-background p {
+    font-family: "Lato", sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5em;
+    color: #CCDAD1; }
+  #my-background #card1 {
+    grid-area: c1;
+    background: #1E1E2D;
+    border-radius: 0.4em;
+    border: 1px solid #0047ed;
+    margin: 2em auto;
+    width: 60%;
+    padding: 3em 1em;
+    height: 80%; }
+  #my-background #card2 {
+    grid-area: c2;
+    background: #1E1E2D;
+    border-radius: 0.4em;
+    border: 1px solid #0047ed;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 1em;
+    text-align: center; }
+    @media only screen and (max-width: 650px) {
+      #my-background #card2 {
+        width: 95%;
+        padding: 0.3em; } }
+    #my-background #card2 .dev-icons {
+      max-width: 10em;
+      padding: 1em; }
+    #my-background #card2 .react-icon {
+      fill: #07E8DC; }
+  #my-background .card-text {
+    color: #CCDAD1; }
+  #my-background .name-and-title {
+    font-family: "Cormorant Infant", serif;
+    color: #CCDAD1;
+    font-size: 1.3em;
+    text-align: center; }
+  #my-background blockquote {
+    font-family: "Lato", sans-serif;
+    color: #CCDAD1;
+    text-align: center; }
+  #my-background img {
+    max-width: 100%;
+    max-height: 100%; }
+  #my-background .BG-left-column {
+    grid-area: bg-left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    background-color: #1E1E2D;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-height: 99%; }
+    @media only screen and (max-width: 1100px) {
+      #my-background .BG-left-column {
+        max-height: 90%; } }
+    @media only screen and (max-width: 1000px) {
+      #my-background .BG-left-column {
+        max-height: 80%; } }
+  @media only screen and (max-width: 950px) {
+    #my-background {
+      grid-template-areas: "txt txt" "bg-left bg-left" "c1 c1" "c2 c2"; }
+      #my-background .name-and-title {
+        background-color: #1E1E2D;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5); }
+      #my-background img {
+        width: 100%;
+        height: auto; }
+      #my-background .BG-left-column {
+        margin-left: 0;
+        box-shadow: initial;
+        background-color: initial; }
+      #my-background blockquote {
+        margin-bottom: 2em; } }
+
+/***********
+
+ - MY SKILLS
+
+ **************/
+#my-skills {
+  margin: 0;
+  overflow: hidden; }
+
+/***********GRID
+ 
+- MY PROJECTS
+
+ **************/
+#my-work {
+  background: #d6d9e0;
+  position: relative;
+  height: 60em;
+  overflow: hidden; }
+  #my-work h2 {
+    text-align: center;
+    padding: 2em; }
+    @media only screen and (max-width: 375px) {
+      #my-work h2 {
+        padding: 1em; } }
+
+#my-work-grid {
+  width: 100%;
+  margin-top: 2em;
+  height: 25em; }
+  #my-work-grid .img-card {
+    border: 1px solid blue;
+    background: #fff;
+    box-shadow: 0.3em 0.3em 0 -0.1em rgba(100, 100, 100, 0.5);
+    text-align: center; }
+    #my-work-grid .img-card .project-overlay {
+      display: inline-block; }
+      #my-work-grid .img-card .project-overlay span {
+        width: 90%;
+        display: none; }
+  #my-work-grid .project1 {
+    display: none;
+    background: url(./Images/website1.jpg) no-repeat scroll center center/cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; }
+  #my-work-grid .project2 {
+    border: 1px solid purple;
+    height: 25em;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    background: url(./Images/website2.jpg) no-repeat scroll center center/cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; }
+  #my-work-grid .project3 {
+    display: none;
+    background: url(./Images/website3.jpg) no-repeat scroll center center/cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; }
+  #my-work-grid .project4 {
+    z-index: 3;
+    display: none;
+    background: url(./Images/website4.jpg) no-repeat scroll center center/cover; }
+  #my-work-grid .project5 {
+    z-index: 2;
+    display: none;
+    background: url(./Images/website5.jpg) no-repeat scroll center center/cover; }
+  #my-work-grid .left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 6; }
+  #my-work-grid .right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    z-index: 6; }
+
+@media only screen and (max-width: 438px) {
+  .left-arrow {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    z-index: 6; }
+
+  .right-arrow {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    z-index: 6; } }
+@media only screen and (max-width: 375px) {
+  .left-arrow {
+    display: none; }
+
+  .right-arrow {
+    display: none; } }
+/**************
+
+ CONTACT FORM
+
+ *************/
+#contact {
+  display: inline-block;
+  background: #d1d4da;
+  width: 100%;
+  height: 65em;
+  overflow: hidden; }
+  @media only screen and (max-width: 400px) {
+    #contact {
+      height: 70em; } }
+  #contact h2 {
+    text-align: center;
+    padding-top: 2em;
+    margin-bottom: 2em;
+    color: black; }
+    @media only screen and (max-width: 400px) {
+      #contact h2 {
+        margin-bottom: 1.5em; } }
+  @media only screen and (max-width: 400px) {
+    #contact span {
+      display: block;
+      margin: 0 auto; } }
+  #contact #submit-alert {
+    color: #a9c9ca;
+    border-radius: 1em;
+    display: block;
+    position: fixed;
+    top: 3.5em;
+    left: 30%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: 40%;
+    text-align: center;
+    background-color: rgba(0, 71, 237, 0.9);
+    font-size: 1.3em;
+    padding: 0.2em;
+    height: 1.6em;
+    z-index: 9999;
+    visibility: hidden; }
+  #contact #alert-msg {
+    display: none; }
+
+#contact {
+  position: relative; }
+
+#left-column {
+  position: relative;
+  width: 25%; }
+  #left-column span {
+    position: absolute;
+    top: 50%; }
+
+#form-container {
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 25%; }
+  @media only screen and (max-width: 650px) {
+    #form-container {
+      left: 10%; } }
+
+#contact-form {
+  display: grid;
+  grid-template-areas: "name e-mail" "number ." "subject ." "message message" "message message" ".       button";
+  grid-gap: 2em 20%;
+  text-align: center; }
+  @media only screen and (max-width: 650px) {
+    #contact-form {
+      grid-template-areas: "name name" "e-mail e-mail" "number number" "subject subject" "message message" "button button";
+      width: 160%; } }
+  #contact-form input {
+    background-color: #1E1E2D;
+    border: 1px solid #808D8E;
+    height: 3em;
+    color: #CCDAD1;
+    padding: 1em;
+    font-size: 0.9em; }
+    #contact-form input::-webkit-input-placeholder, #contact-form input::placeholder {
+      color: #808D8E;
+      opacity: 0.8;
+      text-align: center; }
+    #contact-form input:focus {
+      border: lightgrey; }
+    #contact-form input[type=submit] {
+      grid-area: button;
+      background-color: #121F49;
+      border-radius: 1em;
+      height: 2.5em;
+      color: #CCDAD1;
+      font-size: 1.2em;
+      padding: 0.5em;
+      width: 50%;
+      margin-bottom: 7em;
+      justify-self: end;
+      letter-spacing: 0.1em; }
+
+#name {
+  grid-area: name; }
+
+#e-mail {
+  grid-area: e-mail; }
+
+#number {
+  grid-area: number; }
+
+#subject {
+  grid-area: subject; }
+
+#message {
+  grid-area: message;
+  background-color: #1E1E2D;
+  border: 1px solid #0047ed;
+  height: 20em;
+  resize: none;
+  color: #CCDAD1;
+  font-size: 1.3em; }
+  #message::-webkit-input-placeholder, #message::placeholder {
+    color: #808D8E;
+    opacity: 0.8; }
+
+/************
+
+ SOCIAL LINKS
+
+ ***********/
+#left-column {
+  position: absolute;
+  top: 63%;
+  left: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 0.2fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2em 2em;
+  width: 10em; }
+  @media only screen and (max-width: 950px) {
+    #left-column {
+      top: 85%; } }
+  @media only screen and (max-width: 650px) {
+    #left-column {
+      display: none; } }
+  #left-column span {
+    background-color: rgba(169, 169, 194, 0.3);
+    grid-area: 1 / 1 / 2 / 4;
+    justify-self: center;
+    padding: 0 1em .2em 1em;
+    color: black;
+    font-size: 13;
+    font-weight: 900; }
+  #left-column #icon1 {
+    grid-area: 2 / 1 / 3 / 2;
+    display: inline-block;
+    margin-left: 0.7em;
+    color: #121F49; }
+  #left-column #icon2 {
+    grid-area: 2 / 2 / 3 / 3;
+    display: inline-block;
+    margin-left: 0.4em;
+    color: #121F49; }
+  #left-column #icon3 {
+    grid-area: 2 / 3 / 3 / 4;
+    display: inline-block;
+    margin-left: 0.4em;
+    color: #121F49; }
+  #left-column .social-links:hover {
+    animation: iconBounce 3s ease-in-out infinite; }
+
+/***********
+
+Media Queries(will update and place all media queries towards bottom)
+
+************/
+/**
+NavBar Medias
+**/
+@media only screen and (max-width: 600px) {
+  .topnav {
+    float: left;
+    background-color: initial;
+    opacity: 1; }
+    .topnav .topnav-right {
+      float: left;
+      display: none; }
+      .topnav .topnav-right a {
+        float: initial;
+        display: block;
+        padding: 1.4rem 1.5rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid blue;
+        color: #808D8E; }
+
+  .menu-container {
+    float: left;
+    width: 6em;
+    background-color: #000;
+    text-align: center;
+    height: 4em;
+    opacity: 0.6;
+    padding: 0.8em;
+    z-index: 1; }
+    .menu-container:focus {
+      opacity: 0.8; }
+
+  .sandwich-menu {
+    background-color: #808D8E;
+    font-size: 1.3em;
+    opacity: 1;
+    z-index: -1; } }
+@media only screen and (min-width: 601px) {
+  .sandwich-menu {
+    display: none; }
+
+  .topnav.topnav-right {
+    display: initial; } }
+/*
+*Intro Card Medias
+*/
+@media only screen and (max-width: 1200px) {
+  #my-background #card1 {
+    padding: 3em 1em 5em 1em; } }
+@media only screen and (max-width: 760px) {
+  #my-background #card1 {
+    padding: 3em 1em 5em 1em;
+    width: 95%; } }
+@media only screen and (max-width: 375px) {
+  #my-background #card1 {
+    padding: 2em 1em 3em 1em;
+    width: 95%;
+    height: 90%; } }
+/*
+*Project Area Medias
+*/
+@media only screen and (min-width: 750px) {
+  #my-work-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #my-work-grid .project1 {
+      display: initial;
+      flex-grow: 1;
+      height: 12.5em;
+      opacity: 0.7;
+      margin: 0 1em; }
+    #my-work-grid .project2 {
+      flex-grow: 2;
+      margin: 0 1em;
+      width: 20%; }
+    #my-work-grid .project3 {
+      display: initial;
+      flex-grow: 1;
+      height: 12.5em;
+      opacity: 0.7;
+      margin: 0 1em; } }
+@media only screen and (max-width: 375px) {
+  .mobile-span {
+    color: #CCDAD1;
+    display: block;
+    text-align: center;
+    margin-top: 2em; } }
+@media only screen and (max-width: 375px) {
+  .mobile-span {
+    color: #CCDAD1;
+    display: block;
+    text-align: center;
+    margin-top: 2em; } }
+@media only screen and (min-width: 376px) {
+  .mobile-span {
+    display: none; } }
+/*
+*Dev Icons Media
+*/
+@media only screen and (max-width: 1250px) {
+  #my-background #card2 .dev-icons {
+    max-width: 7em; } }
+/*********
+
+Animations
+
+**********/
+@keyframes fadeIn {
+  to {
+    opacity: 0.8; } }
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 1 forwards; }
+
+@keyframes fadeInMain {
+  to {
+    opacity: 1; } }
+.fade-inMain {
+  opacity: 0;
+  animation: fadeInMain 0.75s ease-in 1 forwards; }
+
+@keyframes submitFade {
+  from {
+    width: 0%;
+    background-color: #808D8E;
+    opacity: 0%; }
+  to {
+    width: 40%;
+    background-color: rgba(0, 71, 237, 0.9);
+    opacity: 100%; } }
+.submitFade {
+  animation: submitFade 3s ease-in; }
+
+@keyframes iconBounce {
+  33% {
+    transform: translateY(-0.2em); }
+  66% {
+    transform: translateY(0.2em); }
+  100% {
+    transform: translateY(0px); } }
+@media only screen and (max-width: 650px) {
+  #contact #submit-alert {
+    left: 10%;
+    width: 80%; }
+
+  @keyframes submitFade {
+    from {
+      width: 0%;
+      background-color: #808D8E;
+      opacity: 0%; }
+    to {
+      width: 80%;
+      background-color: rgba(0, 71, 237, 0.9);
+      opacity: 100%; } } }
+@media only screen and (max-width: 400px) {
+  #contact #submit-alert {
+    left: 5%;
+    top: 50%;
+    height: 2em;
+    width: 90%;
+    font-size: 1.1em; }
+
+  @keyframes submitFade {
+    from {
+      width: 0%;
+      background-color: #808D8E;
+      opacity: 0%; }
+    to {
+      width: 90%;
+      background-color: rgba(0, 71, 237, 0.9);
+      opacity: 100%; } } }
+
+/*# sourceMappingURL=style.css.map */
