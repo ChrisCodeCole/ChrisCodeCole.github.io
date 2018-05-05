@@ -206,7 +206,7 @@ GRID - MY BACKGROUND
         display: none; }
   #my-work-grid .project1 {
     display: none;
-    background: url(./Images/website1.jpg) no-repeat scroll center center/cover;
+    background: url(./Images/App1.PNG) no-repeat scroll center center/cover;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -217,14 +217,14 @@ GRID - MY BACKGROUND
     text-align: center;
     margin: 0 auto;
     width: 90%;
-    background: url(./Images/website2.jpg) no-repeat scroll center center/cover;
+    background: url(./Images/App2.PNG) no-repeat scroll center center/cover;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover; }
   #my-work-grid .project3 {
     display: none;
-    background: url(./Images/website3.jpg) no-repeat scroll center center/cover;
+    background: url(./Images/App3.PNG) no-repeat scroll center center/cover;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
