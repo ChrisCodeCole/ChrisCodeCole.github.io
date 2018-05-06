@@ -62,23 +62,34 @@ var linkStyle = "";
 //Create modals for each project
 
 
-function createProjModal(modalBgColor, modalTxtColor, modalTxt){
+function createProjModal(modalTxt){
   var myModal = document.createElement("div");
   myModal.style.textAlign = "center";
-  myModal.style.backgroundColor = modalBgColor;
-  myModal.style.opacity = "0";
+  myModal.style.background = "linear-gradient(to bottom, rgba(30,30,45,0) , rgba(204,218,209,0))";
   myModal.style.height = "100%";
   myModal.style.width = "100%";
-  myModal.style.color = modalTxtColor;
+  myModal.style.display = "flex";
+  myModal.style.alignItems = "center";
+  myModal.style.justifyContent = "center";
+  // myModal.style.color = "";
   
-  var modalText = document.createTextNode(modalTxt);
+  var modalText = document.createElement("p");
+  modalText.appendChild(document.createTextNode(modalTxt));
+  modalText.style.fontSize = "2em";
+  modalText.style.opacity = "0";
+  modalText.style.display = "inline";
+  modalText.style.fontStyle = "italic";
+  modalText.style.fontWeight = "400";
+
   myModal.appendChild(modalText);
 
   myModal.addEventListener('mouseover', () =>{
-    myModal.style.opacity = "100";
+    myModal.style.background = "linear-gradient(to bottom, rgba(30,30,45,0.7) , rgba(204,218,209,0.7))";
+    modalText.style.opacity = "1";
   });
   myModal.addEventListener('mouseleave', () =>{
-    myModal.style.opacity = "0";
+    myModal.style.background = "linear-gradient(to bottom, rgba(30,30,45,0) , rgba(204,218,209,0))";
+    modalText.style.opacity = "0";
   });
 
   return myModal;
@@ -89,30 +100,24 @@ var modalList = [];
 
 //Project1 Modal Details
 
-const bgModal1 = "rgb(30,30,45)";
-const txtModal1 = "rgb(204,218,209)";
-const txtDesc1 = "Weather App - \nClick for more info";
-var projModal1 = createProjModal(bgModal1, txtModal1, txtDesc1);
+const txtDesc1 = "Weather App - " + "\nClick to see it!";
+var projModal1 = createProjModal(txtDesc1);
 projModal1.addEventListener('click', () => {
   window.open("https://codepen.io/ChrisCodeCole/pen/qxejgW", '_blank')
 });
 modalList.push(projModal1);
 
 //Project2
-const bgModal2 = "rgb(30,30,45)";
-const txtModal2 = "rgb(204,218,209)";
-const txtDesc2 = "Weather App - \nClick for more info";
-var projModal2 = createProjModal(bgModal1, txtModal1, txtDesc1);
+const txtDesc2 = "Random Quote App - \nClick to see it!";
+var projModal2 = createProjModal(txtDesc2);
 projModal2.addEventListener('click', () => {
   window.open("https://codepen.io/ChrisCodeCole/pen/XENMmO", '_blank')
 });
 modalList.push(projModal2);
 
 //Project3
-const bgModal3 = "rgb(30,30,45)";
-const txtModal3 = "rgb(204,218,209)";
-const txtDesc3 = "Weather App - \nClick for more info";
-var projModal3 = createProjModal(bgModal1, txtModal1, txtDesc1);
+const txtDesc3 = "Messenger App - \nClick to see it!";
+var projModal3 = createProjModal(txtDesc3);
 modalList.push(projModal3);
 
 //Project4
@@ -211,15 +216,15 @@ if(window.matchMedia("(min-width: 750px)").matches) {
     }
 
     if(linkStyle.search(/App1/) != -1){
-      console.log("Test1");
       projects[1].appendChild(projModal1);
 
     }else if(linkStyle.search(/App2/) != -1){
-      console.log("Test2");
       projects[1].appendChild(projModal2);
 
+    }else if(linkStyle.search(/App3/) != -1){
+      projects[1].appendChild(projModal3);
     }else{
-      console.log("Test3");
+      console.log("No project found"); 
     }
 
     
