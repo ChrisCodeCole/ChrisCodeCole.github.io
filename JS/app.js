@@ -236,25 +236,28 @@ if(window.matchMedia("(min-width: 750px)").matches) {
 //Prevent default on form and submit animation
 document.querySelector('#contact-form').addEventListener('submit', function(e) {
   // e.preventDefault();
+  setTimeout(() => {
   document.querySelector("#contact-form").reset();
+  }, 5000);
+  
 
-  var submitAlert = document.querySelector('#submit-alert');
-  var alertMsg = document.querySelector("#alert-msg");
+  // var submitAlert = document.querySelector('#submit-alert');
+  // var alertMsg = document.querySelector("#alert-msg");
 
   
-  submitAlert.style.visibility = "initial";
-  submitAlert.classList.add("submitFade");
+  // submitAlert.style.visibility = "initial";
+  // submitAlert.classList.add("submitFade");
 
-  setTimeout(function(){
-    alertMsg.classList.add("fade-inMain");
-    alertMsg.style.display = "initial";
-  }, 2000);
-  setTimeout(function(){
-    submitAlert.classList.remove("submitFade");
-    submitAlert.style.visibility = "hidden";
-    alertMsg.classList.remove("fade-inMain");
-    alertMsg.style.display = "none";
+  // setTimeout(function(){
+  //   alertMsg.classList.add("fade-inMain");
+  //   alertMsg.style.display = "initial";
+  // }, 2000);
+  // setTimeout(function(){
+  //   submitAlert.classList.remove("submitFade");
+  //   submitAlert.style.visibility = "hidden";
+  //   alertMsg.classList.remove("fade-inMain");
+  //   alertMsg.style.display = "none";
     
-  }, 5000);
+  // }, 5000);
 
 });
