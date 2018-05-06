@@ -59,15 +59,7 @@ html{
         float: right;
       }
 }
-/*
-BACKGROUND IMAGE(w3school style)
-.bgimg {
-    background-image: url('/w3images/forestbridge.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-*/
+
 
 /*************
 
@@ -91,12 +83,6 @@ GRID - INTRO IMAGE
   z-index: -1;
 }
 
-// .color{
-//   background-color: rgba(0,71,237,0.1);
-//   width:100%;
-//   height:50em;
-//   z-index: 1;
-// }
 
 
 /**************
@@ -321,17 +307,17 @@ GRID - MY BACKGROUND
       -o-background-size: cover;
     }
 
-    .project4{
-      z-index: 3;
-      display: none;
-      background: url(./Images/website4.jpg) no-repeat scroll center center / cover;
-    }
+    // .project4{
+    //   z-index: 3;
+    //   display: none;
+    //   background: url(./Images/website4.jpg) no-repeat scroll center center / cover;
+    // }
 
-    .project5{
-      z-index: 2;
-      display: none;
-      background: url(./Images/website5.jpg) no-repeat scroll center center / cover;
-    }
+    // .project5{
+    //   z-index: 2;
+    //   display: none;
+    //   background: url(./Images/website5.jpg) no-repeat scroll center center / cover;
+    // }
     
     .left-arrow{
       position: absolute;
@@ -371,6 +357,9 @@ GRID - MY BACKGROUND
     display: none;
   }
 }
+/**************
+ Project Modals
+ *************/
 
 
 

@@ -54,7 +54,7 @@ const overlayText = document.querySelectorAll(".img-desc");
 var tempImage = "";
 
 console.log(projects);
-projects[0].style.background
+
 
 var bgStyleCheck = "";
 var linkStyle = "";
@@ -79,7 +79,7 @@ function createProjModal(modalTxt){
   modalText.style.opacity = "0";
   modalText.style.display = "inline";
   modalText.style.fontStyle = "italic";
-  modalText.style.fontWeight = "400";
+  modalText.style.fontWeight = "900";
 
   myModal.appendChild(modalText);
 
@@ -103,7 +103,7 @@ var modalList = [];
 const txtDesc1 = "Weather App - " + "\nClick to see it!";
 var projModal1 = createProjModal(txtDesc1);
 projModal1.addEventListener('click', () => {
-  window.open("https://codepen.io/ChrisCodeCole/pen/qxejgW", '_blank')
+  window.open("https://codepen.io/ChrisCodeCole/pen/XENMmO", '_blank')
 });
 modalList.push(projModal1);
 
@@ -111,7 +111,7 @@ modalList.push(projModal1);
 const txtDesc2 = "Random Quote App - \nClick to see it!";
 var projModal2 = createProjModal(txtDesc2);
 projModal2.addEventListener('click', () => {
-  window.open("https://codepen.io/ChrisCodeCole/pen/XENMmO", '_blank')
+  window.open("https://codepen.io/ChrisCodeCole/pen/qxejgW", '_blank')
 });
 modalList.push(projModal2);
 
@@ -124,7 +124,8 @@ modalList.push(projModal3);
 //Project5
 
 
-
+//Add initial overlay
+projects[1].appendChild(projModal2);
 
 // Event for medias above 750px
 if(window.matchMedia("(min-width: 750px)").matches) { 
@@ -201,9 +202,6 @@ if(window.matchMedia("(min-width: 750px)").matches) {
     }
 
     //Update Main Image Link
-    //Add event listener to div modals and 
-    //https://stackoverflow.com/questions/9251837/how-to-remove-all-listeners-in-an-element (Replace Node !will replace child listeners if node is replaced)
-    // or https://js-tricks.io/blog/how-to-remove-all-event-listeners-from-an-element
     bgStyleCheck = window.getComputedStyle(projects[1]);
     linkStyle = bgStyleCheck.background;
 
@@ -235,7 +233,7 @@ if(window.matchMedia("(min-width: 750px)").matches) {
 
 //Prevent default on form and submit animation
 document.querySelector('#contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+  // e.preventDefault();
   document.querySelector("#contact-form").reset();
 
   var submitAlert = document.querySelector('#submit-alert');

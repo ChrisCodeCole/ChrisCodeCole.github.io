@@ -42,15 +42,6 @@ html {
   .topnav .topnav-right {
     float: right; }
 
-/*
-BACKGROUND IMAGE(w3school style)
-.bgimg {
-    background-image: url('/w3images/forestbridge.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-*/
 /*************
 
 GRID - INTRO IMAGE
@@ -229,14 +220,6 @@ GRID - MY BACKGROUND
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover; }
-  #my-work-grid .project4 {
-    z-index: 3;
-    display: none;
-    background: url(./Images/website4.jpg) no-repeat scroll center center/cover; }
-  #my-work-grid .project5 {
-    z-index: 2;
-    display: none;
-    background: url(./Images/website5.jpg) no-repeat scroll center center/cover; }
   #my-work-grid .left-arrow {
     position: absolute;
     top: 50%;
@@ -266,6 +249,9 @@ GRID - MY BACKGROUND
 
   .right-arrow {
     display: none; } }
+/**************
+ Project Modals
+ *************/
 /**************
 
  CONTACT FORM
