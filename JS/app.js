@@ -233,13 +233,10 @@ if(window.matchMedia("(min-width: 750px)").matches) {
 
 
 
-//Prevent default on form and submit animation
-document.querySelector('#contact-form').addEventListener('submit', function(e) {
+// //Prevent default on form and submit animation
+// document.querySelector('#contact-form').addEventListener('submit', function(e) {
   // e.preventDefault();
-  setTimeout(() => {
-  document.querySelector("#contact-form").reset();
-  }, 5000);
-  
+  // document.querySelector("#contact-form").reset();
 
   // var submitAlert = document.querySelector('#submit-alert');
   // var alertMsg = document.querySelector("#alert-msg");
@@ -260,4 +257,4 @@ document.querySelector('#contact-form').addEventListener('submit', function(e) {
     
   // }, 5000);
 
-});
+// });
