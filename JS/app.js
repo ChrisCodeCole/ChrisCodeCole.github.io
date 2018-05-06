@@ -118,11 +118,13 @@ modalList.push(projModal2);
 //Project3
 const txtDesc3 = "Messenger App - \nClick to see it!";
 var projModal3 = createProjModal(txtDesc3);
+projModal3.addEventListener('click', () => {
+  window.open("https://vimeo.com/268229570", '_blank')
+});
 modalList.push(projModal3);
 
 //Project4
 //Project5
-
 
 //Add initial overlay
 projects[1].appendChild(projModal2);
