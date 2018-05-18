@@ -1,4 +1,5 @@
 const topnav = document.querySelector(".topnav-right");
+const codeBtn = document.querySelector('.my-work-code-btn');
 
 
 // Hides navigation menu if anywhere is clicked on the screen besides sandwich menu
@@ -129,6 +130,28 @@ modalList.push(projModal3);
 //Add initial overlay
 projects[1].appendChild(projModal2);
 
+
+//Button Event Listeners
+  //App 1 -
+function codeLinkApp1(){
+  window.open("https://codepen.io/ChrisCodeCole/pen/XENMmO", '_blank');
+};
+let App1Link = false;
+  //App 2 - 
+function codeLinkApp2(){
+  window.open("https://codepen.io/ChrisCodeCole/pen/qxejgW", '_blank');
+};
+let App2Link = false;
+  //App 3 -
+function codeLinkApp3(){
+  window.open("https://github.com/ChrisCodeCole/JavaGitProjects/tree/master/src", '_blank');
+};
+let App3Link = false;
+
+//Initial button listener
+codeBtn.addEventListener('click', codeLinkApp2);
+App2Link = true;
+
 // Event for medias above 750px
 if(window.matchMedia("(min-width: 750px)").matches) { 
   document.querySelector("#my-work").addEventListener('click', slideImage);
@@ -161,10 +184,12 @@ if(window.matchMedia("(min-width: 750px)").matches) {
       projects[0].classList.add("fade-in"); 
       projects[1].classList.add("fade-inMain");
       projects[2].classList.add("fade-in");
+      codeBtn.classList.add("fade-inMain");
       setTimeout(function(){
         projects[0].classList.remove("fade-in");
         projects[1].classList.remove("fade-inMain");
         projects[2].classList.remove("fade-in");
+        codeBtn.classList.remove("fade-inMain");
       }, 1000);         
     }
 
@@ -196,10 +221,12 @@ if(window.matchMedia("(min-width: 750px)").matches) {
       projects[0].classList.add("fade-in");
       projects[1].classList.add("fade-inMain");
       projects[2].classList.add("fade-in");
+      codeBtn.classList.add("fade-inMain");
       setTimeout(function(){
         projects[0].classList.remove("fade-in");
         projects[1].classList.remove("fade-inMain");
         projects[2].classList.remove("fade-in");
+        codeBtn.classList.remove("fade-inMain");
       }, 1000);       
     }
 
@@ -215,14 +242,33 @@ if(window.matchMedia("(min-width: 750px)").matches) {
       }
     }
 
+    //Remove button event listeners
+    if(App1Link) {
+      codeBtn.removeEventListener('click', codeLinkApp1);
+      App1Link = false;
+    }
+    if(App2Link) {
+      codeBtn.removeEventListener('click', codeLinkApp2);
+      App2Link = false;
+    }
+    if(App3Link) {
+      codeBtn.removeEventListener('click', codeLinkApp3);
+      App3Link = false;
+    }
+
+
     if(linkStyle.search(/App1/) != -1){
       projects[1].appendChild(projModal1);
-
+      codeBtn.addEventListener('click', codeLinkApp1);
+      App1Link = true;
     }else if(linkStyle.search(/App2/) != -1){
       projects[1].appendChild(projModal2);
-
+      codeBtn.addEventListener('click', codeLinkApp2);
+      App2Link = true;
     }else if(linkStyle.search(/App3/) != -1){
       projects[1].appendChild(projModal3);
+      codeBtn.addEventListener('click', codeLinkApp3);
+      App3Link = true;
     }else{
       console.log("No project found"); 
     }

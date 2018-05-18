@@ -1,7 +1,7 @@
 /**COLORS**/
 $dark-navy: #1E1E2D;
 $dark-blue: #121F49;
-$blue: #0047ed;
+$blue: rgb(2, 40, 128);
 $grey: #808D8E;
 
 
@@ -10,6 +10,7 @@ $grey: #808D8E;
 
 $p-font: 'Cormorant Infant', serif; 
 $s-font: 'Lato', sans-serif;
+
 body{
   margin: 0 auto;
 }
@@ -36,12 +37,14 @@ html{
 
 .topnav {
   position: fixed;
-  background-color: #000;
-  opacity: 0.8;
+  background-color: $blue;
+  opacity: 0.9;
   width: 100%;
   margin: 0;
   padding: 0;
   z-index: 1;
+  box-shadow: 0.5em 0 1em black;
+  border-radius: 0 0 0.1em 0.1em;
       a{
         float: left;  
         padding: 1rem 1.5rem;
@@ -50,8 +53,8 @@ html{
         font-family: $s-font;
         color: $grey;
         &:hover{
-          background-color: rgba(20, 20, 20, 0.3);
-          color: $blue;
+          background-color: rgba(20, 20, 20, 0.6);
+          // color: $blue;
         }
       }
 
@@ -69,18 +72,28 @@ GRID - INTRO IMAGE
 
 #my-intro{
 
-  background: url(Images/laptop1.jpg) no-repeat scroll center center;
+  background: url(Images/close-up-code-coding-160107.jpg) no-repeat scroll center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   overflow: hidden;
-  width: 100%;
-  min-height: 100%;
   margin: 0;
-  display: block;
-  height: 50em;
+  display: flex;
+  align-items: center;
+  height: 100vh;
   z-index: -1;
+}
+
+.my-intro-text{
+  width: 40%;
+  margin-left: 13%;
+  margin-bottom: 5%;
+  background-color: rgba(2, 40, 128, 0.9);
+  padding: 2em;
+  text-align: center;
+  border-radius: 2px;
+  letter-spacing: 0;
 }
 
 
@@ -357,6 +370,27 @@ GRID - MY BACKGROUND
     display: none;
   }
 }
+
+.my-work-code-btn{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3em;
+  border-radius: 0.3em;
+  box-shadow: 0.1em 0.1em 0.1em ligthblue;
+  background-color: transparent;
+  color: $blue;
+  border: 0.1em solid $blue;
+  padding: 0.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.my-work-code-btn:hover{
+  background-color: $blue;
+  color: rgb(214, 217, 224);
+  // border: none;
+}
 /**************
  Project Modals
  *************/
@@ -375,7 +409,6 @@ GRID - MY BACKGROUND
   background: rgb(209, 212, 218);
   width: 100%;
   height: 65em;
-  overflow: hidden;
   @media only screen and (max-width: 400px){
     height: 70em;
   }
@@ -583,6 +616,17 @@ GRID - MY BACKGROUND
   }
 }
 
+.copyright-footer{
+  background-color: $blue;
+  font-family: $s-font;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: $grey;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
 
 /***********
 
@@ -599,6 +643,7 @@ NavBar Medias
   .topnav{
     float: left;
     background-color: initial;
+    box-shadow:0 0 0 0;
     opacity: 1;
       .topnav-right{
         float: left;
@@ -607,16 +652,16 @@ NavBar Medias
           float: initial;
           display: block;
           padding: 1.4rem 1.5rem;
-          background-color: rgba(0, 0, 0, 0.8);
-          border: 1px solid blue;
+          background-color: rgba(2, 40, 128, 1);
           color: $grey;
+          border-top: 1px solid $grey;
         }
     }
   }
   .menu-container{
     float: left;
     width: 6em;
-    background-color: #000;
+    background-color: rgb(2, 40, 128);
     text-align: center;
     height: 4em;
     opacity: 0.6;
@@ -643,6 +688,37 @@ NavBar Medias
   }
   .topnav.topnav-right{
     display: initial;
+  }
+}
+/*
+*Intro Image Medias
+*/
+@media only screen and (min-width: 575px) and (max-width: 875px){
+  .my-intro-text{
+    width: 60%;
+    // margin-left: 13%;
+    // margin-bottom: 5%;
+    // background-color: rgba(2, 40, 128, 0.9);
+    // padding: 2em;
+    // text-align: center;
+    // border-radius: 2px;
+    // letter-spacing: 0;
+  }
+}
+@media only screen and (max-width: 575px){
+  #my-intro{
+    justify-content: center;
+  }
+  .my-intro-text{
+    width: 90%;
+    font-size: 0.5em;
+    margin-left: 0%;
+    margin-bottom: 5%;
+    // background-color: rgba(2, 40, 128, 0.9);
+    // padding: 2em;
+    // text-align: center;
+    // border-radius: 2px;
+    // letter-spacing: 0;
   }
 }
 

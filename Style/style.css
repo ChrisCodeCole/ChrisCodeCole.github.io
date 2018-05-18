@@ -23,12 +23,14 @@ html {
 /**NAVBAR**/
 .topnav {
   position: fixed;
-  background-color: #000;
-  opacity: 0.8;
+  background-color: #022880;
+  opacity: 0.9;
   width: 100%;
   margin: 0;
   padding: 0;
-  z-index: 1; }
+  z-index: 1;
+  box-shadow: 0.5em 0 1em black;
+  border-radius: 0 0 0.1em 0.1em; }
   .topnav a {
     float: left;
     padding: 1rem 1.5rem;
@@ -37,8 +39,7 @@ html {
     font-family: "Lato", sans-serif;
     color: #808D8E; }
     .topnav a:hover {
-      background-color: rgba(20, 20, 20, 0.3);
-      color: #0047ed; }
+      background-color: rgba(20, 20, 20, 0.6); }
   .topnav .topnav-right {
     float: right; }
 
@@ -48,18 +49,27 @@ GRID - INTRO IMAGE
 
 **************/
 #my-intro {
-  background: url(Images/laptop1.jpg) no-repeat scroll center center;
+  background: url(Images/close-up-code-coding-160107.jpg) no-repeat scroll center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   overflow: hidden;
-  width: 100%;
-  min-height: 100%;
   margin: 0;
-  display: block;
-  height: 50em;
+  display: flex;
+  align-items: center;
+  height: 100vh;
   z-index: -1; }
+
+.my-intro-text {
+  width: 40%;
+  margin-left: 13%;
+  margin-bottom: 5%;
+  background-color: rgba(2, 40, 128, 0.9);
+  padding: 2em;
+  text-align: center;
+  border-radius: 2px;
+  letter-spacing: 0; }
 
 /**************
 
@@ -249,6 +259,24 @@ GRID - MY BACKGROUND
 
   .right-arrow {
     display: none; } }
+.my-work-code-btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3em;
+  border-radius: 0.3em;
+  box-shadow: 0.1em 0.1em 0.1em ligthblue;
+  background-color: transparent;
+  color: #022880;
+  border: 0.1em solid #022880;
+  padding: 0.2em;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.my-work-code-btn:hover {
+  background-color: #022880;
+  color: #d6d9e0; }
+
 /**************
  Project Modals
  *************/
@@ -261,8 +289,7 @@ GRID - MY BACKGROUND
   display: inline-block;
   background: #d1d4da;
   width: 100%;
-  height: 65em;
-  overflow: hidden; }
+  height: 65em; }
   @media only screen and (max-width: 400px) {
     #contact {
       height: 70em; } }
@@ -367,7 +394,7 @@ GRID - MY BACKGROUND
 #message {
   grid-area: message;
   background-color: #1E1E2D;
-  border: 1px solid #0047ed;
+  border: 1px solid #022880;
   height: 20em;
   resize: none;
   color: #CCDAD1;
@@ -422,6 +449,16 @@ GRID - MY BACKGROUND
   #left-column .social-links:hover {
     animation: iconBounce 3s ease-in-out infinite; }
 
+.copyright-footer {
+  background-color: #022880;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #808D8E;
+  font-weight: 600;
+  letter-spacing: 0.1em; }
+
 /***********
 
 Media Queries(will update and place all media queries towards bottom)
@@ -434,6 +471,7 @@ NavBar Medias
   .topnav {
     float: left;
     background-color: initial;
+    box-shadow: 0 0 0 0;
     opacity: 1; }
     .topnav .topnav-right {
       float: left;
@@ -442,14 +480,14 @@ NavBar Medias
         float: initial;
         display: block;
         padding: 1.4rem 1.5rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        border: 1px solid blue;
-        color: #808D8E; }
+        background-color: #022880;
+        color: #808D8E;
+        border-top: 1px solid #808D8E; }
 
   .menu-container {
     float: left;
     width: 6em;
-    background-color: #000;
+    background-color: #022880;
     text-align: center;
     height: 4em;
     opacity: 0.6;
@@ -469,6 +507,21 @@ NavBar Medias
 
   .topnav.topnav-right {
     display: initial; } }
+/*
+*Intro Image Medias
+*/
+@media only screen and (min-width: 575px) and (max-width: 875px) {
+  .my-intro-text {
+    width: 60%; } }
+@media only screen and (max-width: 575px) {
+  #my-intro {
+    justify-content: center; }
+
+  .my-intro-text {
+    width: 90%;
+    font-size: 0.5em;
+    margin-left: 0%;
+    margin-bottom: 5%; } }
 /*
 *Intro Card Medias
 */
