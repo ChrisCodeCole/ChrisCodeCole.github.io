@@ -131,7 +131,7 @@ GRID - MY BACKGROUND
     font-family: "Lato", sans-serif;
     color: #CCDAD1;
     text-align: center; }
-  #my-background img {
+  #my-background .my-info-img {
     max-width: 100%;
     max-height: 100%; }
   #my-background .BG-left-column {
@@ -155,7 +155,7 @@ GRID - MY BACKGROUND
       #my-background .name-and-title {
         background-color: #1E1E2D;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5); }
-      #my-background img {
+      #my-background .my-info-img {
         width: 100%;
         height: auto; }
       #my-background .BG-left-column {
@@ -420,9 +420,6 @@ GRID - MY BACKGROUND
   @media only screen and (max-width: 950px) {
     #left-column {
       top: 85%; } }
-  @media only screen and (max-width: 650px) {
-    #left-column {
-      display: none; } }
   #left-column span {
     background-color: rgba(169, 169, 194, 0.3);
     grid-area: 1 / 1 / 2 / 4;
@@ -510,6 +507,9 @@ NavBar Medias
 /*
 *Intro Image Medias
 */
+@media only screen and (max-width: 768px) {
+  #my-intro {
+    background: url("Images/close-up-code-coding-160107(small).jpg") no-repeat scroll center center; } }
 @media only screen and (min-width: 575px) and (max-width: 875px) {
   .my-intro-text {
     width: 60%; } }
@@ -522,6 +522,18 @@ NavBar Medias
     font-size: 0.5em;
     margin-left: 0%;
     margin-bottom: 5%; } }
+@media only screen and (min-width: 768px) {
+  .my-info-imgBig {
+    display: initial; }
+
+  .my-info-imgSmall {
+    display: none; } }
+@media only screen and (max-width: 767px) {
+  .my-info-imgBig {
+    display: none; }
+
+  .my-info-imgSmall {
+    display: initial; } }
 /*
 *Intro Card Medias
 */
@@ -582,6 +594,27 @@ NavBar Medias
 @media only screen and (max-width: 1250px) {
   #my-background #card2 .dev-icons {
     max-width: 7em; } }
+@media only screen and (max-width: 651px) {
+  .copyright-footer {
+    height: 7em;
+    padding-top: 1em; } }
+@media only screen and (max-width: 650px) {
+  #left-column {
+    top: initial;
+    left: 5%;
+    right: 5%;
+    bottom: -8.5%;
+    display: flex;
+    justify-content: space-between;
+    width: 90%; }
+    #left-column span {
+      display: none; }
+    #left-column #icon1 {
+      color: #808D8E; }
+    #left-column #icon2 {
+      color: #808D8E; }
+    #left-column #icon3 {
+      color: #808D8E; } }
 /*********
 
 Animations
