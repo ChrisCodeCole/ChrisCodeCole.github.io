@@ -339,11 +339,14 @@ GRID - MY BACKGROUND
       -o-background-size: cover;
     }
 
-    // .project4{
-    //   z-index: 3;
-    //   display: none;
-    //   background: url(./Images/website4.jpg) no-repeat scroll center center / cover;
-    // }
+    .project4{
+      display: none;
+      background: url(./Images/App4.png) no-repeat scroll center center / cover;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+    }
 
     // .project5{
     //   z-index: 2;

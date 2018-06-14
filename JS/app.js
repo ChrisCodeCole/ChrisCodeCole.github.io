@@ -44,7 +44,7 @@ window.onload = function(){
 // CSS image strings and variables
 
 let bgImages = [];
-for(var i = 1; i <= 3; i ++){
+for(var i = 1; i <= 4; i ++){
   bgImages.push(`url("./Style/Images/App${i}.PNG") no-repeat scroll center center / cover`);
   
 }
@@ -125,6 +125,13 @@ projModal3.addEventListener('click', () => {
 modalList.push(projModal3);
 
 //Project4
+const txtDesc4 = "React Todo List App - Click to see it!";
+var projModal4 = createProjModal(txtDesc4);
+projModal4.addEventListener('click', () => {
+  window.open("https://blooming-harbor-28312.herokuapp.com/", '_blank')
+});
+modalList.push(projModal4);
+
 //Project5
 
 //Add initial overlay
@@ -147,6 +154,11 @@ function codeLinkApp3(){
   window.open("https://github.com/ChrisCodeCole/JavaGitProjects/tree/master/src", '_blank');
 };
 let App3Link = false;
+  //App 4-
+ function codeLinkApp4(){
+  window.open("https://github.com/ChrisCodeCole/react-todolist", '_blank');
+};
+let App4Link = false;
 
 //Initial button listener
 codeBtn.addEventListener('click', codeLinkApp2);
@@ -255,6 +267,10 @@ if(window.matchMedia("(min-width: 750px)").matches) {
       codeBtn.removeEventListener('click', codeLinkApp3);
       App3Link = false;
     }
+    if(App4Link) {
+      codeBtn.removeEventListener('click', codeLinkApp4);
+      App4Link = false;
+    }
 
 
     if(linkStyle.search(/App1/) != -1){
@@ -269,6 +285,10 @@ if(window.matchMedia("(min-width: 750px)").matches) {
       projects[1].appendChild(projModal3);
       codeBtn.addEventListener('click', codeLinkApp3);
       App3Link = true;
+    }else if(linkStyle.search(/App4/) != -1){
+      projects[1].appendChild(projModal4);
+      codeBtn.addEventListener('click', codeLinkApp4);
+      App4Link = true;
     }else{
       console.log("No project found"); 
     }

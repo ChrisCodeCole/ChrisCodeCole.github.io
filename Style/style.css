@@ -245,6 +245,13 @@ GRID - MY BACKGROUND
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover; }
+  #my-work-grid .project4 {
+    display: none;
+    background: url(./Images/App4.png) no-repeat scroll center center/cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; }
   #my-work-grid .left-arrow {
     position: absolute;
     top: 50%;
