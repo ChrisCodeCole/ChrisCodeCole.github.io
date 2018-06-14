@@ -495,8 +495,6 @@ NavBar Medias
         background-color: #022880;
         color: #808D8E;
         border-top: 1px solid #808D8E; }
-    .topnav .topnav-left {
-      display: none; }
 
   .menu-container {
     float: left;
@@ -515,12 +513,12 @@ NavBar Medias
     font-size: 1.3em;
     opacity: 1;
     z-index: -1; } }
+@media only screen and (max-width: 750px) {
+  .topnav-left {
+    display: none; } }
 @media only screen and (min-width: 601px) {
   .sandwich-menu {
-    display: none; }
-
-  .topnav.topnav-right {
-    display: initial; } }
+    display: none; } }
 /*
 *Intro Image Medias
 */
