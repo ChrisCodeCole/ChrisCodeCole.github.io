@@ -37,11 +37,24 @@ html {
     text-decoration: none;
     text-align: center;
     font-family: "Lato", sans-serif;
-    color: #808D8E; }
+    color: #f0e9e9;
+    text-transform: uppercase;
+    font-weight: 600; }
     .topnav a:hover {
       background-color: rgba(20, 20, 20, 0.6); }
   .topnav .topnav-right {
     float: right; }
+  .topnav .topnav-left {
+    float: left; }
+    .topnav .topnav-left span {
+      float: left;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      color: #f0e9e9;
+      text-transform: uppercase;
+      font-weight: 600; }
 
 /*************
 
@@ -70,6 +83,8 @@ GRID - INTRO IMAGE
   text-align: center;
   border-radius: 2px;
   letter-spacing: 0; }
+  .my-intro-text h2 {
+    color: #eee2e2; }
 
 /**************
 
@@ -480,6 +495,8 @@ NavBar Medias
         background-color: #022880;
         color: #808D8E;
         border-top: 1px solid #808D8E; }
+    .topnav .topnav-left {
+      display: none; }
 
   .menu-container {
     float: left;

@@ -277,8 +277,48 @@ if(window.matchMedia("(min-width: 750px)").matches) {
   } 
 }
 
+//Event for medias below 750px
+if(window.matchMedia("(max-width: 749px)").matches) {
+  let touchstartX = 0;
+  let touchstartY = 0;
+  let touchendX = 0;
+  let touchendY = 0;
 
+  const gestureZone = projects[1];
 
+  gestureZone.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+      touchstartY = event.changedTouches[0].screenY;
+  }, false);
+
+  gestureZone.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      touchendY = event.changedTouches[0].screenY;
+      handleGesture();
+  }, false); 
+
+  function handleGesture() {
+      if (touchendX < touchstartX - 10) {
+          console.log('Swiped left');
+      }
+      
+      if (touchendX > touchstartX) {
+          console.log('Swiped right');
+      }
+      
+      if (touchendY < touchstartY) {
+          console.log('Swiped up');
+      }
+      
+      if (touchendY > touchstartY) {
+        console.log('Swiped down');
+      }
+      
+      if (touchendY === touchstartY) {
+        console.log('Tap');
+      }
+  }
+}
 // //Prevent default on form and submit animation
 // document.querySelector('#contact-form').addEventListener('submit', function(e) {
   // e.preventDefault();
